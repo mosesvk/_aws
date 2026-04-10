@@ -1,0 +1,9 @@
+.env
+.env.*
+__pycache__/
+*.pyc
+.DS_Store
+*.tfstate
+*.tfstate.backup
+.terraform/
+cdk.out/
