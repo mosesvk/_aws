@@ -1,7 +1,12 @@
-from aws_cdk import core as cdk
+import aws_cdk as cdk
 from aws_cdk import aws_s3 as s3
 
 class MyFirstStack(cdk.Stack):
     def __init__(self, scope: cdk.Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
         s3.Bucket(self, "MyFirstBucket")
+
+# These lines are missing - CDK needs an entry point
+app = cdk.App()
+MyFirstStack(app, "MyFirstStack")
+app.synth()
